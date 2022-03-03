@@ -3,7 +3,7 @@ from django.db.models import CASCADE
 
 from atracoes.models import Atracao
 from comentarios.models import Comentarios
-from avaliacoes.models import Avalicao
+from avaliacoes.models import Avaliacao
 from enderecos.models import Endereco
 
 
@@ -13,7 +13,7 @@ class PontoTuristico(models.Model):
     aprovado = models.BooleanField(default=False)
     atracoes = models.ManyToManyField(Atracao)
     comentarios = models.ManyToManyField(Comentarios)
-    avaliacoes = models.ManyToManyField(Avalicao)
+    avaliacoes = models.ManyToManyField(Avaliacao)
     enderecos = models.ForeignKey(
         Endereco,on_delete=models.CASCADE,null=True,
         blank=True

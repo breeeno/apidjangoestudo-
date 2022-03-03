@@ -1,5 +1,5 @@
 from django.contrib import admin
-from avaliacoes.models import Avalicao
+from avaliacoes.models import Avaliacao
 
-admin.site.register(Avalicao)
+admin.site.register(Avaliacao)
 
